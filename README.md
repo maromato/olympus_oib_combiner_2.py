@@ -18,3 +18,5 @@ https://stackoverflow.com/questions/49970418/how-can-use-iadf-iavff-1-0-fiji-plu
 
 Please let me know if there is any further question. maromato2012@gmail.com
 
+# olympus_oib_tiff_converter.py
+This python script is for importing oib files from a specific folders, make a hyperstacked file with 2 channels (color and z-series), save them as tiff files.
