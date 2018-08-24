@@ -11,7 +11,7 @@ This scipt is for a converter for olympus oib file to tiff which was originally 
 https://www.embl.de/services/core_facilities/almf/services/downloads/oib-combiner/
 A few bugs are fixed and the script is revised for the z-stack oib files from mulitile areas.
 
-#Python in ImageJ or Fiji
+#Python.ImageJ
 
 Unfotunately, the latest Fiji (imageJ) at August, 2018 is still not compatible with jython-shaded-2.7.0.jar, even though the default jars in Fiji.app include this version of jython and python is not working in this setting! 
 You probably see the error like "console: Failed to install '': java.nio.charset.UnsupportedCharsetException: cp0", when you try to run any of python code in Fiji.
