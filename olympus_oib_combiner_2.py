@@ -12,7 +12,7 @@ def loadStacks():
  
   
   IJ.log(" "); 
-  IJ.log("oib concatenator v0.5; 2012; tischer@embl.de; almf@embl.de"); 
+  IJ.log("oib concatenator v0.5.1; 2012; tischer@embl.de; almf@embl.de; revised by maromato2012@gmail.com"); 
   IJ.log("tested with: ImageJ 1.47a; FIJI update on July 20th 2012"); 
    
   srcDir = DirectoryChooser("Choose directory").getDirectory()
