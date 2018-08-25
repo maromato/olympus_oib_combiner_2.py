@@ -11,6 +11,8 @@ This scipt is for a converter for olympus oib file to tiff which was originally 
 https://www.embl.de/services/core_facilities/almf/services/downloads/oib-combiner/
 A few bugs are fixed and the script is revised for the z-stack oib files from mulitile areas.
 
+![dlaoultx4aevcbz](https://user-images.githubusercontent.com/17135389/44613850-246a5600-a7e8-11e8-9403-dfcf02d135a6.jpg)
+
 # Python and ImageJ or Fiji
 
 Unfotunately, the latest Fiji (imageJ) at August, 2018 is still not compatible with jython-shaded-2.7.0.jar, even though the default jars in Fiji.app include this version of jython and python is not working in this setting! 
