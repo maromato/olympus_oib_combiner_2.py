@@ -11,7 +11,7 @@ This scipt is for a converter for olympus oib file to tiff which was originally 
 https://www.embl.de/services/core_facilities/almf/services/downloads/oib-combiner/
 A few bugs are fixed and the script is revised for the z-stack oib files from mulitile areas.
 
-![dlaoultx4aevcbz](https://user-images.githubusercontent.com/17135389/44613850-246a5600-a7e8-11e8-9403-dfcf02d135a6.jpg)
+![dlaoultx4aevcbz](https://user-images.githubusercontent.com/17135389/44613872-99d62680-a7e8-11e8-9f15-84c870c67abd.jpg)
 
 # Python and ImageJ or Fiji
 
