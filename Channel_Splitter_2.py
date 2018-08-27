@@ -4,7 +4,7 @@ import time
 import pickle
 from ij.gui import GenericDialog
 from ij.io import DirectoryChooser, FileSaver, OpenDialog
-from ij import IJ, ImagePlus
+from ij import IJ, ImagePlus, ImageStack
 from java.lang import Runtime, Runnable
 import os
 from loci.plugins.util import BFVirtualStack
@@ -31,14 +31,20 @@ def run():
   nSlices = imp.getNSlices()
   nChannels = imp.getNChannels()
   nTimeFrames = imp.getNFrames()
+  imp = IJ.getImage()
+  extractChannel(imp, 1, 1).show()
+  
   stack = imp.getImageStack()
   ch = ImageStack(imp.width, imp.height)
   
+  
   for i in range(1, imp.getNSlices() + 1):
-   index = imp.getStackIndex(nChannel, i, nFrame)
+   index = imp.getStackIndex(nChannels, i, nTimeFrames)
    ch.addSlice(str(i), stack.getProcessor(index))
-   return ImagePlus("Channel " + str(nChannel), ch)
+   return ImagePlus("Channel " + str(nChannels), ch)
  
   print "nSlices :", nSlices, "nChannels :",  nChannels, "nTimeFrames :", nTimeFrames
   imp = IJ.getImage()
   extractChannel(imp, 1, 1).show()
+
+run()
