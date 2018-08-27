@@ -21,7 +21,7 @@ def run():
   
   sId = ".tiff"  	
 
-  
+  iStack=1
   for root, directories, filenames in os.walk(srcDir):
     for filename in filenames:
       path = os.path.join(root,filename)
@@ -31,15 +31,17 @@ def run():
       cs = ChannelSeparator()
       cs.setId(path)
       print "cs" ,cs
-      iStack=1
+     
       iSample=-(-iStack//4)
+      iStack = iStack +1
+      
       bf = BFVirtualStack(path, cs, False, False, False)
       for sliceIndex in xrange(1, bf.getSize() +1):
         print "Processing slice", sliceIndex
+        print "iStack", iStack, "iSample", iSample
         ip = bf.getProcessor(sliceIndex)
-        sliceFileName = os.path.join(targetDir, str(iSample)", filename+"_"+str(sliceIndex) + ".tiff")
+        sliceFileName = os.path.join(targetDir, str(iSample), filename+"_"+str(sliceIndex) + ".tiff")
         print "writing ", sliceFileName
-        #FileSaver(ImagePlus(str(sliceIndex), ip)).saveAsTiff(sliceFileName)
-      iStack +=1
- 
+        FileSaver(ImagePlus(str(sliceIndex), ip)).saveAsTiff(sliceFileName)
+
 run()
