@@ -21,10 +21,9 @@ def extractChannel(imp, nChannel, nFrame):
 
 def loadStacks():
  
-  
   IJ.log(" "); 
-  IJ.log("oib_tiff_converter_ver1.0; 08/24/2018; maromato2012@gmail.com"); 
-  IJ.log("tested with: ImageJ 1.47a; FIJI update on July 20th 2012"); 
+  IJ.log("Channel_Splitter_ver1.0; 08/24/2018; maromato2012@gmail.com"); 
+  IJ.log("tested with: ImageJ2 with jython-shaded-2.5.3.jar, Fiji updated 8/24/2018"); 
    
   srcDir = DirectoryChooser("Choose directory").getDirectory()
   if not srcDir:
