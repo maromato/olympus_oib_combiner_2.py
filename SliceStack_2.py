@@ -36,7 +36,7 @@ srcDir = DirectoryChooser("Choose directory").getDirectory()
         print "Processing slice", sliceIndex
         ip = bf.getProcessor(sliceIndex)
         sliceFileName = os.path.join(targetDir+filename+"_"+str(sliceIndex) + ".tif")
-        print sliceFileName
+        print "writing ", sliceFileName
         #FileSaver(ImagePlus(str(sliceIndex), ip)).saveAsTiff(sliceFileName)
  
 run()
