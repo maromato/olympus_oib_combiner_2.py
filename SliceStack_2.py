@@ -20,8 +20,6 @@ srcDir = DirectoryChooser("Choose directory").getDirectory()
     return
   
   sId = ".tiff"  	
-  iStack = 0
-  
   for root, directories, filenames in os.walk(srcDir):
     for filename in filenames:
       path = os.path.join(root,filename)
@@ -37,6 +35,6 @@ srcDir = DirectoryChooser("Choose directory").getDirectory()
         ip = bf.getProcessor(sliceIndex)
         sliceFileName = os.path.join(targetDir+filename+"_"+str(sliceIndex) + ".tif")
         print "writing ", sliceFileName
-        #FileSaver(ImagePlus(str(sliceIndex), ip)).saveAsTiff(sliceFileName)
+        FileSaver(ImagePlus(str(sliceIndex), ip)).saveAsTiff(sliceFileName)
  
 run()
