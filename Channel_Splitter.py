@@ -33,4 +33,4 @@ def run():
   nTimeFrames = imp.getNFrames()
   print "nSlices :", nSlices, "nChannels :",  nChannels, "nTimeFrames :", nTimeFrames
   #imp2, imp3, imp4, imp4 = ChannelSplitter.split(imp);
-  
+run()
