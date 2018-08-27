@@ -30,12 +30,12 @@ def run():
   path = os.path.join(srcDir, od.getFileName())
   filename=od.getFileName()
   # Choose a directory to store each slice as a file
-  #targetDir = DirectoryChooser("Choose target directory").getDirectory()
-  #if targetDir is None:
-    # User canceled the dialog
-    #return
-  # Ready:
-  print path
+  targetDir = DirectoryChooser("Choose target directory").getDirectory()
+  if targetDir is None:
+     User canceled the dialog
+    return
+   Ready:
+  #print path
   
   imp = IJ.openImage(path)
   imp.show()
@@ -46,6 +46,6 @@ def run():
    imp2.show()
    
    fs=FileSaver(imp2)
-   fs.saveAsTiff(filename+"_c"+str(j)+".tiff")
+   fs.saveAsTiff(targetDir, filename+"_c"+str(j)+".tiff")
    
 run()
