@@ -2,10 +2,10 @@
 # olympus_oib_tiff_converter.py
 This python script is to import oib files from a specific folder, make a hyperstacked file with 2 channels (color and z-series), save them as tiff files.
 
-#Channel_Splitter_MF.py
+# Channel_Splitter_MF.py
 This python script is to import hyperstacked tiff files from a specific folder, split the color channels and save them into a target folder.
 
-#SliceStack_MF.py
+# SliceStack_MF.py
 This python script is to import z-stacked tiff files from a specific folder, slit them into each slice and save them into a target folder.  
 
 # olympus_oib_combiner_2.py
