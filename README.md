@@ -7,8 +7,8 @@ This python script is to import hyperstacked tiff files from a specific folder, 
 
 # SliceStack_MF.py
 This python script is to import multi-slice image stack files(tiff) from a specific folder and save each slice into a user defined target folder.  
-# Channel_Merger.py
-This python script is to import separeted channle image stack files(tiff) from a specific folder, merged them into a composite file and save it to a user defined target folder.
+# Channel_Merger-MF.py
+This python script is to import 4 separeted channle (4 channels) image files(tiff) from a specific folder, merged them into a composite file and save it to a user defined target folder.
 
 # olympus_oib_combiner_2.py
 This is a converter for olympus oib file to tiff file.
