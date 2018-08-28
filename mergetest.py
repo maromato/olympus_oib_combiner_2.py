@@ -32,21 +32,16 @@ def loadStacks():
 
       IJ.log("opening "+filename)
       imp = IJ.openImage(path)
-      #c[iStack]=imp
+      
       imp.show()
       imp.setTitle("st"+str(iStack))  # in order of the combining to work additive
       print filename, str(iStack)
       iStack +=1
 
-    #imp2 = StackCombiner().combineHorizontally(c[0],c[1])
-    imp2=IJ.run("Merge Channels...", "c1=st1 c2=st0 c3=st3 c4=st2  create composite keep");
-    print 'ok'
-    fs=FileSaver(imp2)
-    print 'OK2'
-    saveAsTiff(srcDir+"merge_"+filename)
-    #IJ.log("convert back to normal stack: Image...Hyperstacks...Hyperstack to Stack")
-    #IJ.log("if you got an error message from the hyperstack you probably ran out of memory and it did not load all files!")
-     
+    
+    imp2=IJ.run("Merge Channels...", "c1=st1 c2=st0 c3=st3 c4=st2  create composite");
+    IJ.save(imp2,os.path.join(srcDir,filename+"_merge"))
+         
 def run():
   loadStacks()
     
