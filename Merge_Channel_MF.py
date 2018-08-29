@@ -80,7 +80,7 @@ def loadStacks():
 
       iStack +=1
       if (iStack)%4 == 0:
-        imp2=IJ.run("Merge Channels...", "c1=st1 c2=st0 c3=st3 c4=st2  create composite");
+        imp2=IJ.run("Merge Channels...", "c1=st1 c2=st2 c3=st3 c4=st0  create composite");
         IJ.save(imp2,os.path.join(targetDir,filename+"_merge"))
         iStack=0
       
