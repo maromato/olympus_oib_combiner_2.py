@@ -20,23 +20,22 @@ from java.lang import Runtime, Runnable
 
 
 
+
 def loadStacks():
 
  
 
-  
-
   IJ.log(" "); 
 
-  IJ.log("oib concatenator v0.5.1; 2012; tischer@embl.de; almf@embl.de; revised by maromato2012@gmail.com"); 
+  IJ.log("Channel_Splitter_ver1.0; 08/24/2018; maromato2012@gmail.com"); 
 
-  IJ.log("tested with: ImageJ 1.47a; FIJI update on July 20th 2012"); 
+  IJ.log("tested with: ImageJ2 with jython-shaded-2.5.3.jar, Fiji updated 8/24/2018"); 
 
    
 
   srcDir = DirectoryChooser("Choose directory").getDirectory()
 
-  if not srcDir:
+  if srcDir is None:
 
     return
 
@@ -48,13 +47,13 @@ def loadStacks():
 
     return
 
-  sId = ".tiff"
-
   
+
+  sId = ".tiff"  	
 
   iStack = 0
 
- 
+  
 
   for root, directories, filenames in os.walk(srcDir):
 
@@ -72,23 +71,19 @@ def loadStacks():
 
       imp = IJ.openImage(path)
 
-      
-
       imp.show()
+
 
       imp.setTitle("st"+str(iStack))  # in order of the combining to work additive
 
       print filename, str(iStack)
 
       iStack +=1
-
-
-
-    
-
-    imp2=IJ.run("Merge Channels...", "c1=st1 c2=st0 c3=st3 c4=st2  create composite");
-
-    IJ.save(imp2,os.path.join(targetDir,filename+"_merge"))
+      if (iStack)%4 == 0:
+        imp2=IJ.run("Merge Channels...", "c1=st1 c2=st0 c3=st3 c4=st2  create composite");
+        IJ.save(imp2,os.path.join(targetDir,filename+"_merge"))
+        iStack=0
+      
 
          
 
@@ -96,6 +91,7 @@ def run():
 
   loadStacks()
 
+run()
+
     
 
-run()
