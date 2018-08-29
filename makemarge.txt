@@ -1,0 +1,52 @@
+
+mkdir slice59 slice61 slice63 slice65 slice67 slice69 slice71 slice73
+
+for /r %i in (*_59.tiff) do copy %i H:\slice59
+for /r %i in (*_61.tiff) do copy %i H:\slice61
+for /r %i in (*_63.tiff) do copy %i H:\slice63
+for /r %i in (*_65.tiff) do copy %i H:\slice65
+for /r %i in (*_67.tiff) do copy %i H:\slice67
+for /r %i in (*_69.tiff) do copy %i H:\slice69
+for /r %i in (*_71.tiff) do copy %i H:\slice71
+for /r %i in (*_73.tiff) do copy %i H:\slice73
+
+mkdir slice59_merge slice61_merge slice63_merge slice65_merge slice67_merge slice69_merge slice71_merge slice73_merge
+
+mkdir 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+mkdir 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+
+mkdir slice58_merge slice60_merge slice62_merge slice64_merge slice66_merge slice68_merge slice70_merge slice72_merge
+
+
+for  %i in (*_0001.oib*) do move %i .\1
+for  %i in (*_0002.oib*) do move %i .\2
+for  %i in (*_0003.oib*) do move %i .\3
+for  %i in (*_0004.oib*) do move %i .\4
+for  %i in (*_0005.oib*) do move %i .\5
+for  %i in (*_0006.oib*) do move %i .\6
+for  %i in (*_0007.oib*) do move %i .\7
+for  %i in (*_0008.oib*) do move %i .\8
+for  %i in (*_0009.oib*) do move %i .\9
+for  %i in (*_0010.oib*) do move %i .\10
+for  %i in (*_0011.oib*) do move %i .\11
+for  %i in (*_0012.oib*) do move %i .\12
+for  %i in (*_0013.oib*) do move %i .\13
+for  %i in (*_0014.oib*) do move %i .\14
+for  %i in (*_0015.oib*) do move %i .\15
+for  %i in (*_0016.oib*) do move %i .\16
+for  %i in (*_0017.oib*) do move %i .\17
+for  %i in (*_0018.oib*) do move %i .\18
+for  %i in (*_0019.oib*) do move %i .\19
+for  %i in (*_0020.oib*) do move %i .\20
+for  %i in (*_0021.oib*) do move %i .\21
+for  %i in (*_0022.oib*) do move %i .\22
+for  %i in (*_0023.oib*) do move %i .\23
+for  %i in (*_0024.oib*) do move %i .\24
+for  %i in (*_0025.oib*) do move %i .\25
+for  %i in (*_0026.oib*) do move %i .\26
+for  %i in (*_0027.oib*) do move %i .\27
+for  %i in (*_0028.oib*) do move %i .\28
+for  %i in (*_0029.oib*) do move %i .\29
+for  %i in (*_0030.oib*) do move %i .\30
+for  %i in (*_0031.oib*) do move %i .\31
+for  %i in (*_0032.oib*) do move %i .\32
